@@ -1,0 +1,25 @@
+
+/* Apply styles to the product list container */
+.product-list-container {
+    margin: 20px;
+  }
+  
+  /* Style the product table */
+  .product-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+  }
+  
+  /* Style table header cells */
+  .product-table th {
+    background-color: #f2f2f2;
+  }
+  
+  /* Style table cells */
+  .product-table td, .product-table th {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: left;
+  }
+  

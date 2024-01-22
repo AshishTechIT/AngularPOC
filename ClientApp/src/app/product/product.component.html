@@ -1,0 +1,28 @@
+<div class="product-list-container">
+  <h2>Product Catalog</h2>
+
+  <table class="product-table">
+    <thead>
+      <tr>
+        <th>Product Name</th>
+        <th>Description</th>
+        <th>Price</th>
+        <th>Select Country</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let product of products">
+        <td>{{ product.name }}</td>
+        <td>{{ product.description }}</td>
+        <td>{{ product.price | currency:selectedCountrySymbol:'symbol' }}</td>
+        <td>
+          <select [(ngModel)]="selectedCountry" (change)="onCountrySelection(product, selectedCountry)">
+            <option *ngFor="let country of countries" [value]="country.countryCode" [selected]="country.countryCode === selectedCountry">
+              {{ country.name }}
+            </option>
+          </select>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
